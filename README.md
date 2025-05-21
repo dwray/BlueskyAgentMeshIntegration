@@ -39,7 +39,7 @@ This Node.js application monitors tweets sent to a specific Bluesky handle, extr
 
 ## Bluesky API Setup
 
-1. Nothing special is required here, unlike Twitter, simply
+1. Nothing special is required here, simply add your account details to the configuration file
 
 ## Agent Mesh API Setup
 
