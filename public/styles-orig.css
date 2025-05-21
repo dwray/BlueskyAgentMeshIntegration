@@ -1,0 +1,254 @@
+/* Base Styles */
+:root {
+    --primary-color: #1285e3; /* BlueSky blue */
+    --secondary-color: #0f1419;
+    --background-color: #f5f8fa;
+    --text-color: #0f1419;
+    --border-color: #e1e8ed;
+    --success-color: #17bf63;
+    --error-color: #e0245e;
+    --warning-color: #ffad1f;
+    --processing-color: #794bc4;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #657786;
+}
+
+/* Status Container */
+.status-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.status {
+    display: flex;
+    align-items: center;
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-indicator.online {
+    background-color: var(--success-color);
+}
+
+.status-indicator.offline {
+    background-color: var(--error-color);
+}
+
+.stats {
+    display: flex;
+}
+
+.stat {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.stat span {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.stat label {
+    font-size: 0.8rem;
+    color: #657786;
+}
+
+/* Conversations Container */
+.conversations-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.conversations-container h2 {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    font-size: 1.4rem;
+}
+
+.conversations {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 40px 0;
+    color: #657786;
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--border-color);
+}
+
+/* Conversation Card */
+.conversation {
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 15px;
+    position: relative;
+}
+
+.conversation-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info i {
+    margin-right: 8px;
+    color: #657786;
+}
+
+.username {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.timestamp {
+    font-size: 0.8rem;
+    color: #657786;
+}
+
+.question, .response {
+    margin-bottom: 15px;
+}
+
+.label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--secondary-color);
+}
+
+.content {
+    background-color: var(--background-color);
+    padding: 10px;
+    border-radius: 5px;
+    white-space: pre-wrap;
+}
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 3px 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+.status-badge.completed {
+    background-color: var(--success-color);
+}
+
+.status-badge.processing {
+    background-color: var(--processing-color);
+}
+
+.status-badge.error {
+    background-color: var(--error-color);
+}
+
+.post-link {
+    text-align: right;
+}
+
+.post-link a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.post-link a i {
+    margin-right: 5px;
+}
+
+.post-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .status-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .stats {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    .stat {
+        margin: 0;
+    }
+}

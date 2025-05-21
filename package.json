@@ -1,0 +1,28 @@
+{
+  "name": "bluesky-agentmesh-integration",
+  "version": "1.0.0",
+  "description": "Integration between BlueSky and Agent Mesh for Solace-related questions",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "bluesky",
+    "agent-mesh",
+    "solace"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@atproto/api": "^0.6.23",
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "form-data": "^4.0.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
