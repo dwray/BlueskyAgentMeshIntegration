@@ -60,7 +60,7 @@ This Node.js application monitors tweets sent to a specific Bluesky handle, extr
 
 3. Access the web UI at `http://localhost:3000` (or your configured port)
 
-4. Send a tweet mentioning (@<Bluesky Handle>) your configured Bluesky handle with a question
+4. Send a tweet mentioning (@[Bluesky Handle]) your configured Bluesky handle with a question you want answering
 
 ## How It Works
 
